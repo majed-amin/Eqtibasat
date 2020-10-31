@@ -14,6 +14,7 @@
 
 body {
     background: #A90A3D;
+    font-family: flatJooza;
     margin-top: -50px;
 }
 
@@ -40,7 +41,6 @@ body {
 }
 
 blockquote {
-    font-family: flatJooza;
     border-right: 10px solid #A90A3D;
     margin: 30px 10px;
     padding: 10px 30px;
@@ -100,4 +100,19 @@ blockquote footer {
     content: '—';
     color: #000;
     padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #quotetext {
+        font-size: 25px;
+    }
+    .container {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #quotetext {
+        font-size: 18px;
+    }
 }
