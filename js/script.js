@@ -1,7 +1,16 @@
 function fetchQuote() {
     var XHR;
-    var file = "quotes/arQuotes.json";
+    var file ;
 
+    //get selected quote
+    let select = document.querySelector("#test").value;
+    //chek the selector
+    if (select == "option1") {
+        file = "quotes/arQuotes.json";
+    }  else if (select == "option2") {
+        file = "quotes/arShaar.json";
+    }
+console.log(select);
     var colors = [
         "#188FA7",
         "#9DBBAE",
@@ -25,9 +34,10 @@ function fetchQuote() {
     } else {
         XHR = new ActiveXObject("Microsoft.XMLHttp");
     }
+
     XHR.open("GET", file, true);
 
-    XHR.onreadystatechange = function() {
+    XHR.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var quotes = JSON.parse(this.responseText);
             var randomQuote = getRandom(quotes);
