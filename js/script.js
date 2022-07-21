@@ -10,7 +10,6 @@ function fetchQuote() {
     }  else if (select == "option2") {
         file = "quotes/arShaar.json";
     }
-console.log(select);
     var colors = [
         "#188FA7",
         "#9DBBAE",
