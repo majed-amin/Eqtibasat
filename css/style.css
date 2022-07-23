@@ -25,7 +25,7 @@ body {
 
 .header {
     font-family: rakkas;
-    font-size: 7.2rem;
+    font-size: 4.2rem;
     text-align: center;
     color: #fff;
     text-shadow: -1px 6px 16px #3c3c3c;
@@ -44,10 +44,14 @@ body {
 blockquote {
     border-right: 10px solid #A90A3D;
     margin: 30px 10px;
-    padding: 10px 30px;
+    padding: 10px 10px;
     text-align: justify;
 }
-
+@media (max-width: 767px) {
+    blockquote {
+        font-size: 18px;
+    }
+}
 blockquote:before {
     color: #ccc;
     line-height: 0.1em;
@@ -58,9 +62,10 @@ blockquote:before {
 blockquote h1,
 h2,
 h3,
-p {
+p,pre {
     display: inline;
     line-height: 40px;
+    font-size:1.4rem;;
 }
 
 .quotemark {
@@ -105,7 +110,8 @@ blockquote footer {
 
 @media only screen and (max-width: 768px) {
     #quotetext {
-        font-size: 25px;
+        font-size: 1.2rem;
+
     }
     .container {
         margin-right: 20px;
@@ -114,6 +120,15 @@ blockquote footer {
 
 @media only screen and (max-width: 320px) {
     #quotetext {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
+}
+
+
+.choice {
+    font-size: 1.5rem;
+}
+.choice select {
+    display: block;
+    margin:10px auto;
 }
